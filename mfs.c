@@ -116,6 +116,9 @@ int main()
 
           fseek(fp, 11, SEEK_SET); 
           fread(&BPB_BytsPerSec,2 ,1, fp); //bytes per sector
+
+          fseek(fp, 13, SEEK_SET);
+		      fread(&BPB_SecPerClus,1,1,fp);
         }
     }
 
