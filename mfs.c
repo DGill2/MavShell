@@ -119,6 +119,9 @@ int main()
 
           fseek(fp, 13, SEEK_SET);
 		      fread(&BPB_SecPerClus,1,1,fp);
+
+          fseek(fp, 14, SEEK_SET);
+		      fread(&BPB_RsvdSecCnt,1,2,fp);
         }
     }
 
